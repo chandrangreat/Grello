@@ -9,11 +9,11 @@ import { environment } from '../environments/environment';
 })
 export class AppComponent {
 
-  title: String;
+  welcomeTitle: String;
 
   public constructor ( private titleService: Title) {
     titleService.setTitle(environment.title);
-    this.title =  'Grello';
+    this.welcomeTitle =  'Grello';
   }
 
   addBoardShow() {
