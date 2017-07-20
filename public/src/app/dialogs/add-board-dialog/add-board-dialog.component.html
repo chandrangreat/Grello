@@ -1,0 +1,16 @@
+<h1 md-dialog-title>Add Board</h1>
+
+<div md-dialog-content >
+  <md-input-container >
+    <input [(ngModel)]="nameOfBoard"  mdInput placeholder="Name of the Board" >
+  </md-input-container>
+</div>
+
+<div md-dialog-actions>
+  <button md-button (click)="getBoardName()">
+    Submit
+  </button>
+  <button md-button md-dialog-close>
+    Cancel
+  </button>
+</div>

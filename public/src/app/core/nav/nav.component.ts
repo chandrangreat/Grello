@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AddBoardDialogComponent } from '../../dialogs/add-board-dialog/add-board-dialog.component';
+import { MdDialog } from '@angular/material';
 
 @Component({
   selector: 'app-nav',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MdDialog) { }
 
   ngOnInit() {
+  }
+
+  addBoardDialog() {
+    const dialog = this.dialog.open(AddBoardDialogComponent);
   }
 
 }
