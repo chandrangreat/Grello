@@ -6,6 +6,7 @@ import { CoreModule } from './core/core.module';
 import { AppComponent } from './app.component';
 import { AddBoardDialogComponent } from './dialogs/add-board-dialog/add-board-dialog.component';
 import { WelcomeComponent } from './core/welcome/welcome.component';
+import { PageNotFoundComponent } from './core/page-not-found/page-not-found.component';
 import { FormsModule } from '@angular/forms';
 import {HttpModule} from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
@@ -13,14 +14,16 @@ import { RouterModule, Routes } from '@angular/router';
 import { DialogService } from './dialogs/dialog.service';
 
 const routes: Routes = [
-  { path: '', component: WelcomeComponent }
+  { path: '', component: WelcomeComponent },
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     AddBoardDialogComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
