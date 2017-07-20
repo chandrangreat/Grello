@@ -9,14 +9,8 @@ import { environment } from '../environments/environment';
 })
 export class AppComponent {
 
-  welcomeTitle: String;
-
   public constructor ( private titleService: Title) {
     titleService.setTitle(environment.title);
-    this.welcomeTitle =  'Grello';
   }
 
-  addBoardShow() {
-    alert('Hell');
-  }
 }
