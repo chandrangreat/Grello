@@ -6,6 +6,14 @@ var BoardSchema = new Schema({
         type : String,
         required : true
     },
+    shortId: {
+        type : String,
+        required : true
+    },
+    shortUrl: {
+        type : String,
+        required : true
+    },
     list_id: {
         type : Array,
         required : false
