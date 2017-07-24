@@ -9,7 +9,7 @@ export class WelcomeComponent implements OnInit {
 
   welcomeTitle: String;
   constructor() {
-    this.welcomeTitle = 'Grellooooooooo';
+    this.welcomeTitle = 'Grello';
   }
 
   ngOnInit() {
