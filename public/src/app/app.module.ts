@@ -12,10 +12,13 @@ import {HttpModule} from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 
 import { DialogService } from './dialogs/dialog.service';
+import { BoardComponent } from './board/board.component';
 
 const routes: Routes = [
   { path: '', component: WelcomeComponent },
-  { path: '**', component: PageNotFoundComponent }
+  { path: 'b/:id/:name', component: BoardComponent },
+  { path: '404', component: PageNotFoundComponent },
+  { path: '**', redirectTo: '404' }
 ];
 
 @NgModule({
@@ -23,7 +26,8 @@ const routes: Routes = [
     AppComponent,
     AddBoardDialogComponent,
     WelcomeComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    BoardComponent
   ],
   imports: [
     BrowserModule,

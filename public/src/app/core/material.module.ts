@@ -3,7 +3,8 @@ import {
   MdToolbarModule,
   MdButtonModule,
   MdInputModule,
-  MdDialogModule
+  MdDialogModule,
+  MdSnackBarModule
 } from '@angular/material';
 
 import { NgModule } from '@angular/core';
@@ -14,14 +15,16 @@ import { NgModule } from '@angular/core';
     MdToolbarModule,
     MdButtonModule,
     MdInputModule,
-    MdDialogModule
+    MdDialogModule,
+    MdSnackBarModule
   ],
   exports: [
     MdMenuModule,
     MdToolbarModule,
     MdButtonModule,
     MdInputModule,
-    MdDialogModule
+    MdDialogModule,
+    MdSnackBarModule
   ]
 })
 

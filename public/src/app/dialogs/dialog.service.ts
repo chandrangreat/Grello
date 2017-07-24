@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
+import { Router } from '@angular/router';
+import {MdSnackBar} from '@angular/material';
 
 @Injectable()
 export class DialogService {
@@ -8,7 +10,7 @@ export class DialogService {
   private Url;
   private headers;
 
-  constructor(private http: Http) {
+  constructor(private http: Http, private router: Router, private snackbar: MdSnackBar ) {
 
     this.Url = 'http://localhost:3000/boards';
 
@@ -24,12 +26,16 @@ export class DialogService {
                 name: name
             }), { headers: this.headers } )
             .toPromise()
-            .then(response => response.json().data)
-            .catch(this.handleError);
+            .then(response => {
+              const reply = response.json().data;
+              this.router.navigate([ reply.shortUrl ]);
+            })
+            .catch(this.handleError.bind(this));
   }
 
-  private handleError(error: any): Promise <any> {
-    console.error('An error occurred', error);
+  public handleError(error: any): Promise <any> {
+    this.snackbar.open('Board not Created', 'OK', { duration: 5000 });
+    // console.error('An error occurred', error);
     return Promise.reject(error.message || error);
   }
 
