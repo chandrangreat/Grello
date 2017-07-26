@@ -22,4 +22,10 @@ describe('WelcomeComponent', () => {
   it('should be created', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have home title as "Welcome to Grello" in h1 tags', () => {
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('h1').textContent).toContain('Welcome to Grello');
+  });
+
 });

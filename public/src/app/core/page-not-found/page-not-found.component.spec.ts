@@ -22,4 +22,9 @@ describe('PageNotFoundComponent', () => {
   it('should be created', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should contain "Page not found"', () => {
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('h1').textContent).toContain('Page Not Found');
+  });
 });
