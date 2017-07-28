@@ -1,0 +1,25 @@
+.grello-list-container {
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.grello-list-wrapper {
+  display: inline-block;
+  max-height: 95%;
+  margin: 5px;
+  width: 250px;
+  border: 10px;
+  overflow-y: scroll;
+  background: gainsboro;
+}
+
+.grello-button-wrapper {
+    display: inline-block;
+    margin: 5px;
+    border: 10px;
+    vertical-align: top;
+}

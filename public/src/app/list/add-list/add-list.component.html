@@ -1,0 +1,10 @@
+<button md-button (click)="showForm()" *ngIf="!formShow" class="grello-add-list-button">Add List</button>
+<div *ngIf="formShow" class="grello-add-list-wrapper">
+  <md-input-container class="grello-add-list-button">
+    <input [(ngModel)]="listName" mdInput placeholder="Add List">
+  </md-input-container>
+  <div>
+    <button (click)="saveList()" md-button >Save</button>
+    <button (click)="hideForm()" md-icon-button><md-icon svgIcon="close"></md-icon></button>
+  </div>
+</div>

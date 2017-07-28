@@ -4,7 +4,10 @@ import {
   MdButtonModule,
   MdInputModule,
   MdDialogModule,
-  MdSnackBarModule
+  MdSnackBarModule,
+  MdListModule,
+  MdLineModule,
+  MdIconModule
 } from '@angular/material';
 
 import { NgModule } from '@angular/core';
@@ -16,7 +19,10 @@ import { NgModule } from '@angular/core';
     MdButtonModule,
     MdInputModule,
     MdDialogModule,
-    MdSnackBarModule
+    MdSnackBarModule,
+    MdListModule,
+    MdLineModule,
+    MdIconModule
   ],
   exports: [
     MdMenuModule,
@@ -24,7 +30,10 @@ import { NgModule } from '@angular/core';
     MdButtonModule,
     MdInputModule,
     MdDialogModule,
-    MdSnackBarModule
+    MdSnackBarModule,
+    MdListModule,
+    MdLineModule,
+    MdIconModule
   ]
 })
 

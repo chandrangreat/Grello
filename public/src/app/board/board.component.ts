@@ -3,6 +3,7 @@ import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
 import 'rxjs/add/operator/filter';
 import { BoardService } from './board.service';
+import { ListContainerComponent } from '../list/list-container/list-container.component';
 
 @Component({
   selector: 'app-board',

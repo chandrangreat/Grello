@@ -1,0 +1,15 @@
+.grello-add-list-button{
+  width: 250px;
+}
+
+.grello-add-list-wrapper{
+    background-color: gainsboro;
+    padding: 0px 10px 10px 10px;
+    border-radius: 5px;
+}
+
+.grello-add-list-wrapper button{
+  background-color: #3f51b5;
+  color: rgba(255,255,255,.87);
+  margin-left: 30px;
+}

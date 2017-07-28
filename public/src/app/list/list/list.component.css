@@ -1,0 +1,9 @@
+.grello-list-wrapper {
+  display: inline-block;
+  max-height: 95%;
+  margin: 5px;
+  width: 250px;
+  border: 10px;
+  overflow-y: scroll;
+  background: gainsboro;
+}

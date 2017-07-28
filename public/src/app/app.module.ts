@@ -13,6 +13,9 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { DialogService } from './dialogs/dialog.service';
 import { BoardComponent } from './board/board.component';
+import { ListContainerComponent } from './list/list-container/list-container.component';
+import { AddListComponent } from './list/add-list/add-list.component';
+import { ListComponent } from './list/list/list.component';
 
 const routes: Routes = [
   { path: '', component: WelcomeComponent },
@@ -27,7 +30,10 @@ const routes: Routes = [
     AddBoardDialogComponent,
     WelcomeComponent,
     PageNotFoundComponent,
-    BoardComponent
+    BoardComponent,
+    ListContainerComponent,
+    AddListComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,
