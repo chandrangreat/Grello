@@ -1,5 +1,4 @@
-<md-list>
-  <md-list-item>
-    <h3 md-line>{{list.listName}}</h3>
-  </md-list-item>
+<div class="grello-list-title mat-title">{{list.listName}}</div>
+<md-list class="grello-list">
+    <app-card class="grello-list-card" [card]="card" *ngFor="let card of list?.cards"></app-card>
 </md-list>

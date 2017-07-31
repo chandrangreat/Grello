@@ -23,7 +23,7 @@ export class BoardComponent implements OnInit {
       .subscribe(params => {
         this.id = params.id;
         this.boardService.getBoard(this.id).then(response => {
-              this.data = response.json().data;
+              this.data = response.json().data[0];
               this.titleService.setTitle(this.data.name + ' | Grello');
             }).catch(this.handleError.bind(this));
       });

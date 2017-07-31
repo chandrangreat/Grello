@@ -1,0 +1,13 @@
+ .grello-card {
+  white-space: normal;
+}
+
+.grello-card-title {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+md-card-content, md-card-title {
+  margin: 0;
+}
+

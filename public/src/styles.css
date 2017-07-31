@@ -10,13 +10,3 @@
    padding: 0;
    margin: 0;
   }
-
-  app-root {
-    display: flex;
-    flex-direction: column;
-  }
-
-  router-outlet {
-    display: block;
-  }
-

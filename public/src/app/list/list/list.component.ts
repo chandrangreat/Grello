@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { CardContainerComponent } from '../../card/card-container/card-container.component';
 
 @Component({
   selector: 'app-list',

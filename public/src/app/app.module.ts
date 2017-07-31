@@ -16,9 +16,13 @@ import { BoardComponent } from './board/board.component';
 import { ListContainerComponent } from './list/list-container/list-container.component';
 import { AddListComponent } from './list/add-list/add-list.component';
 import { ListComponent } from './list/list/list.component';
+import { CardContainerComponent } from './card/card-container/card-container.component';
+import { AddCardComponent } from './card/add-card/add-card.component';
+import { CardComponent } from './card/card/card.component';
+import { HomeBoardsComponent } from './core/home-boards/home-boards.component';
 
 const routes: Routes = [
-  { path: '', component: WelcomeComponent },
+  { path: '', component: HomeBoardsComponent },
   { path: 'b/:id/:name', component: BoardComponent },
   { path: '404', component: PageNotFoundComponent },
   { path: '**', redirectTo: '404' }
@@ -33,7 +37,11 @@ const routes: Routes = [
     BoardComponent,
     ListContainerComponent,
     AddListComponent,
-    ListComponent
+    ListComponent,
+    CardContainerComponent,
+    AddCardComponent,
+    CardComponent,
+    HomeBoardsComponent
   ],
   imports: [
     BrowserModule,

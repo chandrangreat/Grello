@@ -1,9 +1,18 @@
-.grello-list-wrapper {
-  display: inline-block;
-  max-height: 95%;
-  margin: 5px;
-  width: 250px;
-  border: 10px;
+ .grello-list-title {
+  padding-left: 10px;
+  margin: 0px;
+}
+
+.grello-list {
+  margin: 0px;
+  padding: 5px;
+  height: 100%;
   overflow-y: scroll;
-  background: gainsboro;
+  background: whitesmoke;
+}
+
+.grello-list > * {
+  margin-bottom: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
