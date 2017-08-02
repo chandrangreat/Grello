@@ -1,0 +1,21 @@
+<div class="grello-home-boards-container">
+  <div *ngIf="boards?.length > 0">
+    <h3>My Boards</h3>
+    <md-grid-list cols="4" rowHeight="2:1" gutterSize="10">
+    <md-grid-tile
+        id="{{board?.shortId}}"
+        routerLink="{{board?.shortUrl}}"
+        *ngFor="let board of boards"
+        [colspan]="1"
+        [rowspan]="1"
+        [style.background]="getBGColor()"
+        style="cursor:pointer">
+      {{board?.name}}
+    </md-grid-tile >
+    </md-grid-list>
+  </div>
+  <div style="text-align: center" *ngIf="boards?.length == 0">
+    <h2>You have not created a board yet...</h2>
+    <a href="javascript:void(0)" (click)="addBoardDialog()">Create one now? Yes!!!</a>
+  </div>
+</div>

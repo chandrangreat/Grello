@@ -1,0 +1,4 @@
+<button (click)="showForm()" *ngIf="!formShow" md-button class="grello-add-card-button">Add Card</button>
+<md-input-container *ngIf="formShow" class="grello-add-list-button">
+  <input #cardNameInput (blur)="hideForm()" (keyup.enter)="cardNameSubmit()" [(ngModel)]="cardName" mdInput placeholder="Add Card">
+</md-input-container>

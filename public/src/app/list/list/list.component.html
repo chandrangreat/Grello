@@ -1,4 +1,5 @@
 <div class="grello-list-title mat-title">{{list.listName}}</div>
 <md-list class="grello-list">
-    <app-card class="grello-list-card" [card]="card" *ngFor="let card of list?.cards"></app-card>
+    <app-card class="grello-list-card" [card]="card" [listId]="list.listId" *ngFor="let card of cards"></app-card>
 </md-list>
+<div class="grello-add-card-wrapper"><app-add-card (newCard)="newCard($event)" [boardId]="boardId" [listId]="list.listId"></app-add-card></div>

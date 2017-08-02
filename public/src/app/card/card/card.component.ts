@@ -7,10 +7,17 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CardComponent implements OnInit {
   @Input() card: any;
+  @Input() listId: string;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  checkIfCardBelongsToList(listId) {
+    if ( this.listId === listId ) {
+      return true;
+    } else { return false; }
   }
 
 }

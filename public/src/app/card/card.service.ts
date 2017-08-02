@@ -18,14 +18,16 @@ export class CardService {
 
    }
 
-  addCard(cardName) {
-    console.log(cardName);
+  addCard(cardName, boardId, listId) {
 
     this.body = {
-      cardName: cardName
+      cardName: cardName,
+      boardId: boardId,
+      listId: listId
     };
 
-    // return this.http.post()
+    return this.http.post(`${this.Url}`, JSON.stringify(this.body), {headers: this.headers})
+                    .toPromise();
   }
 
 }

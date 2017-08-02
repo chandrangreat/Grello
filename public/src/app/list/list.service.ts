@@ -18,13 +18,13 @@ export class ListService {
    }
 
   addList(listName: String, boardId: String) {
-    console.log(listName);
-    console.log(boardId);
+    // console.log(listName);
+    // console.log(boardId);
     this.body = {
       listName: listName,
       boardId: boardId
     };
-    return this.http.post(`${this.Url}/${listName}/${boardId}`, JSON.stringify(this.body), { headers: this.headers })
+    return this.http.post(`${this.Url}`, JSON.stringify(this.body), { headers: this.headers })
             .toPromise(); // Need to implement the correct functionality
   }
 

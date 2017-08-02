@@ -10,9 +10,15 @@ export class ListComponent implements OnInit {
 
   @Input() boardId: String;
   @Input() list: any;
+  @Input() cards: any;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  newCard(card) {
+    // console.log(card);
+    this.cards.push(card);
   }
 
 }

@@ -20,7 +20,7 @@ export class BoardService {
   }
 
   getBoard(shortId: String): Promise <any> {
-    console.log('Short Id of the Board ' + shortId);
+    // console.log('Short Id of the Board ' + shortId);
     return this.http.get(`${this.Url}/${shortId}`, { headers: this.headers } )
              .toPromise();
             // .then(response => {
@@ -28,6 +28,11 @@ export class BoardService {
             //   console.log(this.result);
             // })
              // .catch(this.handleError.bind(this));
+  }
+
+  getAllBoards(): Promise <any> {
+    return this.http.get(`${this.Url}`, { headers: this.headers })
+                .toPromise();
   }
 
 }

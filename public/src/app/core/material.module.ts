@@ -8,7 +8,8 @@ import {
   MdListModule,
   MdLineModule,
   MdIconModule,
-  MdCardModule
+  MdCardModule,
+  MdGridListModule
 } from '@angular/material';
 
 import { NgModule } from '@angular/core';
@@ -24,7 +25,8 @@ import { NgModule } from '@angular/core';
     MdListModule,
     MdLineModule,
     MdIconModule,
-    MdCardModule
+    MdCardModule,
+    MdGridListModule
   ],
   exports: [
     MdMenuModule,
@@ -36,7 +38,8 @@ import { NgModule } from '@angular/core';
     MdListModule,
     MdLineModule,
     MdIconModule,
-    MdCardModule
+    MdCardModule,
+    MdGridListModule
   ]
 })
 

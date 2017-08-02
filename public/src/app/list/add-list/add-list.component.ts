@@ -34,13 +34,17 @@ export class AddListComponent implements OnInit {
 
   hideForm() {
     this.formShow = false;
+    this.listName = '';
   }
 
   saveList() {
     //  HTTP call to be done
-    this.listService.addList(this.listName, this.boardId);
-    this.newList.emit({listName: 'Gary'}); // Need to implement the actual functionality
-    this.formShow = false;
+    this.listService.addList(this.listName, this.boardId).then(response => {
+      if (response.json().success === true) {
+        this.newList.emit(response.json().data);
+        this.hideForm();
+      }
+    });
   }
 
 }

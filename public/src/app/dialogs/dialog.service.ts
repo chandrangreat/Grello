@@ -21,7 +21,7 @@ export class DialogService {
    }
 
   addBoardName(name: String): Promise <any> {
-    console.log('Name of the Board ' + name);
+    // console.log('Name of the Board ' + name);
     return this.http.post(this.Url, JSON.stringify({
                 name: name
             }), { headers: this.headers } )
