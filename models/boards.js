@@ -17,6 +17,14 @@ var BoardSchema = new Schema({
     list_id: {
         type : Array,
         required : false
+    },
+    lists: {
+        type: Array,
+        required: false
+    },
+    cards: {
+        type: Array,
+        required: false
     }
 });
 

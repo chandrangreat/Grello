@@ -15,6 +15,13 @@ board.add = (params, cb) => {
     });
 };
 
+board.getAllBoards = (cb) => {
+    Board.find({},{name: 1, shortId: 1, shortUrl: 1}, function(err, data) {
+        if(err) cb(err, null);
+        else cb(null, data);
+    });
+}
+
 board.get = (params, cb) => {
     console.log(params);
 

@@ -20,5 +20,7 @@
     "shortid": "^2.2.8",
     "socket.io": "^2.0.3"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "json-server": "^0.11.2"
+  }
 }
