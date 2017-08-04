@@ -7,6 +7,9 @@
   white-space: nowrap;
   /* display: flex; */
   display: -webkit-box;
+
+  margin-top: 10px;
+  margin-left: 10px;
 }
 
 .grello-list-wrapper {
@@ -18,11 +21,19 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+
+  margin: 10px;
+  background-color: #C5CAE9;
+  padding: 17px;
+  border-radius: 5px;
 }
 
 .grello-button-wrapper {
     display: inline-block;
-    margin: 5px;
+    /* margin: 5px; */
     border: 10px;
     vertical-align: top;
+    margin: 10px 9px 5px 5px;
+    background-color: #C5CAE9;
+    border-radius: 5px;
 }

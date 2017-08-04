@@ -8,7 +8,7 @@
   padding: 5px;
   height: 100%;
   overflow-y: scroll;
-  background: whitesmoke;
+  /* background: whitesmoke; */
 }
 
 .grello-list > * {
