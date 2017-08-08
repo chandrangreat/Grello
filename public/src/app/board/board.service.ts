@@ -35,4 +35,14 @@ export class BoardService {
                 .toPromise();
   }
 
+  renameBoard(boardName: string, boardId: string): Promise <any> {
+    return this.http.put(`${this.Url}/${boardId}`, {name: boardName}, { headers: this.headers })
+                .toPromise();
+  }
+
+  deleteBoard(boardId: string) {
+    return this.http.delete(`${this.Url}/${boardId}`, { headers: this.headers })
+                .toPromise();
+  }
+
 }

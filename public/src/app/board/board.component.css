@@ -1,3 +1,59 @@
 :host {
   height: 100%;
 }
+
+.grello-rename-board-form {
+    position: absolute;
+    z-index: 10;
+    display: inline-block;
+    left: 20px;
+    top: 100px;
+    width: 274px;
+    background-color: gainsboro;
+    padding: 0px 15px 15px 15px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+.grello-rename-board {
+  text-align: center;
+  border-bottom: 1px solid #8c8c8c;
+  color: #8c8c8c;
+}
+
+.grello-delete-board {
+  text-align: center;
+  border-bottom: 1px solid #8c8c8c;
+  color: #8c8c8c;
+  margin-bottom: 15px;
+}
+
+.grello-delete-board-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.grello-delete-board-form {
+    position: absolute;
+    z-index: 10;
+    display: inline-block;
+    right: 15px;
+    top: 100px;
+    width: 274px;
+    background-color: gainsboro;
+    padding: 0px 15px 15px 15px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+.grello-board-action-bar{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 15px 0px 20px;
+}
+
+.grello-delete-board-form-buttons{
+      display: flex;
+    /* flex-direction: column; */
+    justify-content: space-evenly;
+}

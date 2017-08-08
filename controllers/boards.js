@@ -23,12 +23,26 @@ board.getAllBoards = (cb) => {
 }
 
 board.get = (params, cb) => {
-    console.log(params);
-
     Board.findOne({'shortId': params}, function(err, data){
         if(err) cb(err, null);
         else cb(null, data);
     });
 };
+
+board.edit = (params, body, cb) => {
+    body["shortUrl"] = '/b/' + params + '/' + body.name.toLowerCase().replace(' ', '-').replace('_', '').replace('/','-');    
+    Board.findOneAndUpdate({'shortId': params}, body ,{ new: true },function(err, data){
+        if(err) cb(err, null);
+        else cb(null, data);
+    });
+};
+
+board.delete = (params, cb) => {
+    Board.findOneAndRemove({'shortId': params}, function(err, data){
+        if(err) cb(err, null);
+        else cb(null, data);
+    });
+};
+
 
 module.exports = board;

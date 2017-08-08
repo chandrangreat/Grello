@@ -1,1 +1,22 @@
+<div class="grello-board-action-bar">
+  <button md-button (click)="showRenameForm()"  color="primary">{{ data?.name }}</button>
+  <button md-button (click)="showConfirmDeleteBoard()" class="grello-delete-board-button">Delete Board</button>
+</div>
+<div class="grello-rename-board-form" *ngIf="renameFormShow">
+  <div class="grello-rename-board"><h4>Rename Board</h4></div>
+  <md-input-container>
+    <input [(ngModel)]="renameField" mdInput placeholder="Name" />
+  </md-input-container>
+  <div>
+    <button style="background-color: #3f51b5; color: white" (click)="saveRenameField()" md-button>Rename</button>
+    <button md-button (click)="closeRenameBox()">Close</button>
+  </div>
+</div>
+<div class="grello-delete-board-form" *ngIf="deleteFormShow">
+  <div class="grello-delete-board"><h4>Delete board {{data?.name}}?</h4></div>
+  <div class="grello-delete-board-form-buttons">
+    <button  (click)="deleteBoard()" md-button>Delete</button>
+    <button style="background-color: #3f51b5; color: white" md-button (click)="closeConfirmDeleteBoard()">Cancel</button>
+  </div>
+</div>
 <app-list-container [data]="data" [boardId]="id"></app-list-container>
