@@ -1,7 +1,7 @@
 <!--list container  -->
 <div class="grello-list-container">
   <!--lists  -->
-    <app-list class="grello-list-wrapper"  [cards]="data?.cards" [list]="list" *ngFor="let list of data?.lists" [boardId]="boardId"></app-list>
+    <app-list class="grello-list-wrapper"  [cards]="data?.cards" [list]="list" (editList)="editList($event)" (deleteList)="deleteList($event)" *ngFor="let list of data?.lists" [boardId]="boardId"></app-list>
     <app-add-list [boardId]="boardId" class="grello-button-wrapper" (newList)="newList($event)"></app-add-list>
 
 </div>

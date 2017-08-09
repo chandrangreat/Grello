@@ -18,4 +18,22 @@ list.add = (params,cb) => {
     });
 };
 
+list.edit = (params, body, cb) => {
+    Board.findOneAndUpdate({ "shortId": params.boardId, "lists.listId": body.listId}, {'$set': {
+        'lists.$.listName': body.listName
+    }}, { new: true }, (err, data) => {
+        if(err) cb(err, null);
+        else cb(null, data);
+    });
+};
+
+list.delete = (params, cb) => {
+    Board.findOneAndUpdate({ "shortId": params.boardId}, {'$pull': {
+     lists: { 'listId': params.listId }   
+    }}, { new: true }, (err, data) => {
+        if(err) cb(err, null);
+        else cb(null, data);
+    });
+};
+
 module.exports = list;

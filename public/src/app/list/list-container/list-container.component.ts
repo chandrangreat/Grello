@@ -19,4 +19,12 @@ export class ListContainerComponent implements OnInit {
     this.data.lists.push(list);
   }
 
+  editList(data) {
+    this.data.lists = data;
+  }
+
+  deleteList(data) {
+    this.data.lists = data;
+  }
+
 }

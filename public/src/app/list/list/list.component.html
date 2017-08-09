@@ -1,4 +1,15 @@
-<div class="grello-list-title mat-title">{{list.listName}}</div>
+<div class="grello-list-header">
+  <span class="grello-list-title mat-title">{{list.listName}}</span>
+  <span>
+    <button class="grello-list-action-button" md-icon-button [mdMenuTriggerFor]="listMenu">
+      <md-icon svgIcon="vertical-menu"></md-icon>
+    </button>
+    <md-menu #listMenu="mdMenu">
+      <button md-menu-item (click)="getEditListModal(boardId, list.listId, list.listName)">Edit List</button>
+      <button md-menu-item (click)="getConfirmDeleteModal(boardId, list.listId, list.listName)">Delete List</button>
+    </md-menu>
+  </span>
+</div>
 <md-list class="grello-list">
     <app-card class="grello-list-card" [card]="card" [listId]="list.listId" *ngFor="let card of cards"></app-card>
 </md-list>

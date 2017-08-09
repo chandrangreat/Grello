@@ -22,3 +22,13 @@
   justify-content: center;
   position: relative;
 }
+
+.grello-list-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.grello-list-action-button{
+  position: relative;
+  bottom: 8px;
+}

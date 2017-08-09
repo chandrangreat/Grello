@@ -1,0 +1,17 @@
+<h1 md-dialog-title>Edit List "{{data.listName}}"</h1>
+
+<div md-dialog-content >
+  <md-input-container >
+    <input [(ngModel)]="nameOfList"  mdInput placeholder="New list title" >
+  </md-input-container>
+</div>
+
+<div md-dialog-actions>
+  <button md-button (click)="submitListName()">
+    Submit
+  </button>
+  <button md-button md-dialog-close>
+    Cancel
+  </button>
+</div>
+

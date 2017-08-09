@@ -20,6 +20,8 @@ import { CardContainerComponent } from './card/card-container/card-container.com
 import { AddCardComponent } from './card/add-card/add-card.component';
 import { CardComponent } from './card/card/card.component';
 import { HomeBoardsComponent } from './core/home-boards/home-boards.component';
+import { EditListDialogComponent } from './dialogs/edit-list-dialog/edit-list-dialog.component';
+import { DeleteListDialogComponent } from './dialogs/delete-list-dialog/delete-list-dialog.component';
 
 const routes: Routes = [
   { path: '', component: HomeBoardsComponent },
@@ -41,7 +43,9 @@ const routes: Routes = [
     CardContainerComponent,
     AddCardComponent,
     CardComponent,
-    HomeBoardsComponent
+    HomeBoardsComponent,
+    EditListDialogComponent,
+    DeleteListDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -54,6 +58,6 @@ const routes: Routes = [
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [AddBoardDialogComponent]
+  entryComponents: [AddBoardDialogComponent, EditListDialogComponent, DeleteListDialogComponent]
 })
 export class AppModule { }
